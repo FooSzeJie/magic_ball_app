@@ -7,21 +7,43 @@ void main() {
   ));
 }
 
+int ballNumber = 0;
+
+List<String> ballWord = [
+  'Yes',
+  'No',
+  'Ask Again Later',
+  'This Answer is Yes',
+  'I Have No Idea'
+];
+
 class Ball extends StatelessWidget {
   const Ball({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100/**/],
+      backgroundColor: Colors.blue[100],
       appBar: AppBar(
         title: Text('Ask Me Anything'),
         centerTitle: true,
       ),
-      body: BallPage(),
+      body: Column(
+        children: <Widget> [
+          SizedBox(
+            height: 100.0,
+          ),
+
+          Center(
+            child: BallPage(),
+          ),
+
+        ],
+      ),
     );
   }
 }
+
 
 class BallPage extends StatefulWidget {
   const BallPage({Key? key}) : super(key: key);
@@ -32,7 +54,7 @@ class BallPage extends StatefulWidget {
 
 class _BallPageState extends State<BallPage> {
 
-  int ballNumber = 0;
+
 
   void RandomBallNum(){
     ballNumber = Random().nextInt(5) + 1;
@@ -59,6 +81,4 @@ class _BallPageState extends State<BallPage> {
     );
   }
 }
-
-
 
