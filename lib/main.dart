@@ -7,15 +7,7 @@ void main() {
   ));
 }
 
-int ballNumber = 0;
 
-List<String> ballWord = [
-  'Yes',
-  'No',
-  'Ask Again Later',
-  'This Answer is Yes',
-  'I Have No Idea'
-];
 
 class Ball extends StatelessWidget {
   const Ball({Key? key}) : super(key: key);
@@ -46,6 +38,7 @@ class Ball extends StatelessWidget {
 
 
 class BallPage extends StatefulWidget {
+
   const BallPage({Key? key}) : super(key: key);
 
   @override
@@ -54,7 +47,7 @@ class BallPage extends StatefulWidget {
 
 class _BallPageState extends State<BallPage> {
 
-
+  int ballNumber = 0;
 
   void RandomBallNum(){
     ballNumber = Random().nextInt(5) + 1;
