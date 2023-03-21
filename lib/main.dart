@@ -18,8 +18,9 @@ class Ball extends StatelessWidget {
     return Scaffold(
 
       // Set the Background Color to blue
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey[800],
       appBar: AppBar(
+        backgroundColor: Colors.black,
 
         // Text in the appBar
         title: Text('Ask Me Anything'),
